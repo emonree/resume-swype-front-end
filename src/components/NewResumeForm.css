@@ -1,0 +1,41 @@
+.resume-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+}
+
+/* .form-label span,
+.form-label > input {
+  width: 50%;
+} */
+.submit-form label{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-form span,
+.submit-form label > input {
+  width: 50%;
+}
+
+.file-upload {
+  /* padding: 5px; */
+  margin-top: 10px;
+}
+
+.submit-button {
+  /* border: none; */
+  border-radius: 5px;
+  border-width: 1px;
+  margin-top: 30px;
+}

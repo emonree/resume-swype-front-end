@@ -1,36 +1,78 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import "./NewResumeForm.css";
 
 const NewResumeForm = (props) => {
-  let emptyPerson = {
+  let defaultResume = {
     name: "",
     email: "",
     phone: "",
     resume_url: "",
     recruiter_notes: "",
-    recruiter_accepted: "",
+    recruiter_accepted: false,
   };
 
-  const [form, setForm] = useState(false);
-  const [person, setPerson] = useState(emptyPerson);
+  const [resume, setResume] = useState(defaultResume);
 
-  const handleUserChange = (event) => {
-    props.setUser({ ...props.user, [event.target.name]: event.target.value })
-  }
+  // const handleUserChange = (event) => {
+  //   props.setUser({ ...props.user, [event.target.name]: event.target.value })
+  // }
 
-  const handleUserSubmit = (event) => {
+  const handleResumeSubmit = (event) => {
     event.preventDefault();
+    // todo: axios post request
     event.target.reset();
   }
 
   const handleChange = (event) => {
-    setPerson({ ...person, [event.target.name]: event.target.value });
+    setResume({ ...resume, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
-  
+  return (
+    <div className="new-resume-form">
+      {/* <h1 className="resume-form">Submit your resume!</h1> */}
+      <h2 className="resume-header">Please fill out the information below and submit your resume in PDF format.</h2>
+      <div className="form-container">
+        <form className="submit-form">
+          <label className="form-label">
+            <strong>
+              <span>Name: </span>
+            </strong>
+            <input type="text" placeholder="Full Name" />
+          </label>
+
+          <label className="form-label">
+            <strong>
+              <span>Email: </span>
+            </strong>
+            <input type="email" placeholder="Email" />
+          </label>
+
+          <label className="form-label">
+            <strong>
+              <span>Phone Number: </span>
+            </strong>
+            <input type="text" placeholder="999-9999-9999" />
+          </label>
+
+          {/* fake upload PDF */}
+          <label className="form-label">
+            <strong>
+              <span>Upload Your Resume: </span>
+            </strong>
+            {/* <input
+              type="text" /> */}
+            <input className="file-upload" type="file" />
+          </label>
+
+          <button className="submit-button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  );
 
 }
 
