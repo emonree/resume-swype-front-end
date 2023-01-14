@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import NewResumeForm from "./components/NewResumeForm"
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import NewResumeForm from "./components/NewResumeForm";
+import "./App.css";
 
 const App = () => {
   // HOOKS
@@ -13,11 +14,13 @@ const App = () => {
   // }, []);
 
   return (
-  <>
-    <div>
-      <h1>Resume Swyper</h1>
-    </div>
-  </>
-)}
+    <>
+      <div>
+        <NewResumeForm />
+        {/* <h1>Resume Swyper</h1> */}
+      </div>
+    </>
+  );
+};
 
 export default App;
