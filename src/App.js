@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import NewResumeForm from "./components/NewResumeForm";
 import RecruiterPage from "./components/RecruiterPage";
 import Resumes from "./components/Resumes";
+import Resume from "./components/Resume";
 import "./App.css";
 
 const App = () => {
