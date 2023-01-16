@@ -24,4 +24,5 @@
 - Commited at 6:48 PM:
 - installed MUI for icons
 - imported Resume.js component into App.js
-
+- added content to Resume.js
+- imported Resume.js into RecruiterPage.jsg=
