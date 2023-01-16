@@ -20,3 +20,8 @@
 - added to README markdown.
 - added content to RecruiterPage.js
 -----
+## January 16th, 2023:
+- Commited at 6:48 PM:
+- installed MUI for icons
+- imported Resume.js component into App.js
+

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setResumes } from "../features/resume/resumeSlice";
-import TinderCard from "react-tinder-card";
+import Resume from "./Resume";
 import "./RecruiterPage.css";
 
 const RecruiterPage = () => {
@@ -29,8 +29,8 @@ const RecruiterPage = () => {
     <div>
       {resumes.map((resume) => {
         return (
-          <div key={resume.id}>
-            <TinderCard>sdfa</TinderCard>
+          <div key={resume.id} className="resume-container">
+            <Resume resume={resume} />
           </div>
         );
       })}
