@@ -15,3 +15,8 @@
 - Commited at 8:50 PM:
 - installed and set up Redux Toolkit and react-redux.
 - used redux to store resume data.
+- Commited at 9:30 PM:
+- installed tinder card library to use the swipe feature.
+- added to README markdown.
+- added content to RecruiterPage.js
+-----
