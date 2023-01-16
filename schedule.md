@@ -9,3 +9,9 @@
 - added content to NewResumeForm.js and styled the form.
 - used NewResumeForm component in App.js.
 - created RecruiterPage.js and RecruiterPage.css.
+- Commited everything on January 15th, 2023 at 8:10 PM.
+-----
+## January 15th, 2023:
+- Commited at 8:50 PM:
+- installed and set up Redux Toolkit and react-redux.
+- used redux to store resume data.
