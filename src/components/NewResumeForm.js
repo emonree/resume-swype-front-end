@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 import "./NewResumeForm.css";
 
 const NewResumeForm = (props) => {
@@ -20,6 +21,11 @@ const NewResumeForm = (props) => {
   const handleResumeSubmit = (event) => {
     event.preventDefault();
     // todo: axios post request
+    axios.post("localhost:8000/api/resumes")
+      .then(() => {
+      // show some sort of success message
+        alert("You have successfully submitted your resume!")
+    })
     event.target.reset();
   }
 
