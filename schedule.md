@@ -25,4 +25,11 @@
 - installed MUI for icons
 - imported Resume.js component into App.js
 - added content to Resume.js
-- imported Resume.js into RecruiterPage.jsg=
+- imported Resume.js into RecruiterPage.js
+
+- Commited at 7:26 PM:
+- npm installed react-pdf viewer
+- added CSS rule to hide the non-formatted version of the PDF
+- added to README
+- added images folder to store placeholder PDF
+- imported react-pdf into Resume.js
