@@ -1,0 +1,16 @@
+.resume-card {
+  position: relative;
+  /* width: 400px;
+  height: 60vh;
+  max-width: 85vw;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px; */
+}
+
+.swipe {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+}

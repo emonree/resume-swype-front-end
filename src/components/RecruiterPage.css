@@ -1,5 +1,7 @@
 .resume-container {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 /* to hide the non-formatted version */

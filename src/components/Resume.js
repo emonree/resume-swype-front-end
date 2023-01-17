@@ -30,7 +30,7 @@ const Resume = (props) => {
       ref={cardRef}
       preventSwipe={["up", "down"]}
     >
-      <div>
+      <div className="resume-cardgit ">
         <p>
           <strong>Name: </strong>
           {resume.name}
