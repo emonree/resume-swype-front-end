@@ -33,3 +33,6 @@
 - added to README
 - added images folder to store placeholder PDF
 - imported react-pdf into Resume.js
+
+- Commited at 7:54 PM:
+- added styling to Resume to get the cards on top of each other
