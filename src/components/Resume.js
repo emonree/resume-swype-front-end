@@ -50,13 +50,14 @@ const Resume = (props) => {
           </p>
         </Document>
       </div>
-
-      <IconButton className="reject" onClick={() => swipe("left")}>
-        <CloseIcon color="error" fontSize="large" />
-      </IconButton>
-      <IconButton className="accept" onClick={() => swipe("right")}>
-        <CheckCircleIcon color="success" fontSize="large" />
-      </IconButton>
+      <div className="buttons">
+        <IconButton className="reject" onClick={() => swipe("left")}>
+          <CloseIcon color="error" fontSize="large" />
+        </IconButton>
+        <IconButton className="accept" onClick={() => swipe("right")}>
+          <CheckCircleIcon color="success" fontSize="large" />
+        </IconButton>
+      </div>
     </TinderCard>
   );
 };
