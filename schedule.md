@@ -36,3 +36,4 @@
 
 - Commited at 7:54 PM:
 - added styling to Resume to get the cards on top of each other
+- styling to buttons
