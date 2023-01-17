@@ -1,14 +1,23 @@
 import React, { useState, useRef } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
-import AddIcon from "@mui/icons-material/Add";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+// import AddIcon from "@mui/icons-material/Add";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
+import PlaceholderPDF from "../images/resume_placeholder.pdf";
 
 const Resume = (props) => {
   const resume = props.resume;
   const cardRef = useRef();
+
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
 
   const swipe = (dir) => {
     cardRef.current.swipe(dir);
@@ -34,6 +43,12 @@ const Resume = (props) => {
           <strong>Phone Number: </strong>
           {resume.phone}
         </p>
+        <Document file={PlaceholderPDF} onLoadSuccess={onDocumentLoadSuccess}>
+          <Page pageNumber={pageNumber} />
+          <p>
+            Page {pageNumber} of {numPages}
+          </p>
+        </Document>
       </div>
 
       <IconButton className="reject" onClick={() => swipe("left")}>
