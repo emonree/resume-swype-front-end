@@ -44,3 +44,8 @@
 - added CSS overflow:hidden property to prevent overflowing content for the tinder card swipe to App.css (not sure why it only works there).
 - added link for google fonts in index.html.
 - removed unused code in NewResumeForm.js/css and RecruiterPage.js
+
+- Committed at 3:21 PM:
+- added to README.
+- added a new MUI icon to Resume.js to view PDF on a separate tab.
+- decreased the PDF size in browser so it's not too big.
