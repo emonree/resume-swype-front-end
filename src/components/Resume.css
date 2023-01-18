@@ -5,6 +5,10 @@
   border: 1px solid black;
 }
 
+.applicant-info {
+  margin-top: 30px;
+}
+
 .swipe {
   position: absolute;
   text-align: center;

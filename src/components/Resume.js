@@ -30,7 +30,7 @@ const Resume = (props) => {
       ref={cardRef}
       preventSwipe={["up", "down"]}
     >
-      <div className="resume-card">
+      <div className="applicant-info">
         <p>
           <strong>Name: </strong>
           {resume.name}
@@ -43,7 +43,12 @@ const Resume = (props) => {
           <strong>Phone Number: </strong>
           {resume.phone}
         </p>
-        <Document file={PlaceholderPDF} onLoadSuccess={onDocumentLoadSuccess}>
+      </div>
+      <div className="resume-card">
+        <Document
+          file={resume.resume_url}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
           <Page pageNumber={pageNumber} />
           <p>
             Page {pageNumber} of {numPages}
