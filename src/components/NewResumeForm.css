@@ -21,14 +21,14 @@ body {
 }
 
 .form-label span {
-  /* font-family: 'Anybody', cursive; */
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Anybody', cursive;
+  /* font-family: 'Manrope', sans-serif; */
   font-weight: bold;
   text-transform: uppercase;
   color: #355070;
 }
 
-.submit-form label{
+.submit-form label {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -65,9 +65,13 @@ button.submit-button:hover {
 }
 
 @media screen and (max-width: 960px) {
-  .resume-header {
+  .resume-header h3 {
     width: 400px;
     font-size: 23px;
+  }
+
+  .submit-form {
+    width: 500px;
   }
 
 }
