@@ -21,10 +21,6 @@ const RecruiterPage = () => {
 
   console.log(resumes);
 
-  // const handleAccept = () => {
-
-  // }
-
   return (
     <div>
       {resumes.map((resume) => {
