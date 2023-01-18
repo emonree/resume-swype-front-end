@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { setResumes } from "../features/resume/resumeSlice";
+import { setResumes } from "../features/resume/resumeSlice"
 import Resume from "./Resume";
 import "./RecruiterPage.css";
 
