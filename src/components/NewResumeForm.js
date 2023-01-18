@@ -50,66 +50,70 @@ const NewResumeForm = (props) => {
   };
 
   return (
-    <div className="new-resume-form">
-      <h3 className="resume-header">
-        1. Please fill out the information below.
-        <br />
-        2. Submit your resume in PDF format.
-      </h3>
-      <div className="form-container">
-        <form className="submit-form" onSubmit={handleResumeSubmit}>
-          <label className="form-label">
-            <strong>
-              <span>Name: </span>
-            </strong>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              onChange={handleChange}
-            />
-          </label>
+    <div>
+      <div className="background-img">
+      </div>
+      <div className="new-resume-form">
+        <h3 className="resume-header">
+          1. Please fill out the information below.
+          <br />
+          2. Submit your resume in PDF format.
+        </h3>
+        <div className="form-container">
+          <form className="submit-form" onSubmit={handleResumeSubmit}>
+            <label className="form-label">
+              <strong>
+                <span>Name: </span>
+              </strong>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                onChange={handleChange}
+              />
+            </label>
 
-          <label className="form-label">
-            <strong>
-              <span>Email: </span>
-            </strong>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={handleChange}
-            />
-          </label>
+            <label className="form-label">
+              <strong>
+                <span>Email: </span>
+              </strong>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={handleChange}
+              />
+            </label>
 
-          <label className="form-label">
-            <strong>
-              <span>Phone Number: </span>
-            </strong>
-            <input
-              type="text"
-              name="phone"
-              placeholder="999-9999-9999"
-              onChange={handleChange}
-            />
-          </label>
+            <label className="form-label">
+              <strong>
+                <span>Phone Number: </span>
+              </strong>
+              <input
+                type="text"
+                name="phone"
+                placeholder="999-9999-9999"
+                onChange={handleChange}
+              />
+            </label>
 
-          {/* fake upload PDF */}
-          <label className="form-label">
-            <strong>
-              <span>Upload Your Resume: </span>
-            </strong>
-            <input
-              className="file-upload"
-              type="file"
-              onChange={handleFileSelected}
-            />
-          </label>
+            {/* fake upload PDF */}
+            <label className="form-label">
+              <strong>
+                <span>Upload Your Resume: </span>
+              </strong>
+              <input
+                className="file-upload"
+                type="file"
+                onChange={handleFileSelected}
+              />
+            </label>
 
-          <button className="submit-button" type="submit">
-            Submit
-          </button>
-        </form>
+            <button className="submit-button" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

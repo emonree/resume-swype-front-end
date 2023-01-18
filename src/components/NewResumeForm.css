@@ -2,12 +2,34 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+.background-img {
+  position: relative;
+  z-index: -1;
+}
+
+.background-img:before {
+  background-image: url('https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIzfHxjcmVhdGl2ZSUyMHNwYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  content: ' ';
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  content: ' ';
+}
+
 .resume-header {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
   font-family: 'Anybody', cursive;
-  color: #E36414;
+  /* color: #E36414; */
+  color: black;
 }
 
 .submit-form {
