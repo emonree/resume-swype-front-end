@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
 import "./NewResumeForm.css";
 
 const NewResumeForm = (props) => {
@@ -13,55 +13,85 @@ const NewResumeForm = (props) => {
   };
 
   const [resume, setResume] = useState(defaultResume);
+  const [resumeFile, setResumeFile] = useState();
 
-  // const handleUserChange = (event) => {
-  //   props.setUser({ ...props.user, [event.target.name]: event.target.value })
-  // }
-
-  const handleResumeSubmit = (event) => {
+  const handleResumeSubmit = async (event) => {
     event.preventDefault();
-    // todo: axios post request
-    axios.post("localhost:8000/api/resumes")
+    const newResume = {
+      ...resume,
+      resume_url: resumeFile,
+    };
+    console.log(newResume);
+
+    // in order for django to handle the file as part of the form submission, this header is necessary
+    const headers = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    };
+    axios
+      .post("http://localhost:8000/api/resumes", newResume, headers)
       .then(() => {
-      // show some sort of success message
-        alert("You have successfully submitted your resume!")
-    })
-    event.target.reset();
-  }
+        // show some sort of success message
+        alert("You have successfully submitted your resume!");
+      });
+    // event.target.reset();
+  };
 
   const handleChange = (event) => {
     setResume({ ...resume, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // handle getting a signed URL from backend for file upload to S3
+  const handleFileSelected = (event) => {
+    const file = event.target.files[0];
+    setResumeFile(file);
+    console.log(file);
   };
 
   return (
     <div className="new-resume-form">
-      {/* <h1 className="resume-form">Submit your resume!</h1> */}
-      <h2 className="resume-header">Please fill out the information below and submit your resume in PDF format.</h2>
+      <h3 className="resume-header">
+        1. Please fill out the information below.
+        <br />
+        2. Submit your resume in PDF format.
+      </h3>
       <div className="form-container">
-        <form className="submit-form">
+        <form className="submit-form" onSubmit={handleResumeSubmit}>
           <label className="form-label">
             <strong>
               <span>Name: </span>
             </strong>
-            <input type="text" placeholder="Full Name" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              onChange={handleChange}
+            />
           </label>
 
           <label className="form-label">
             <strong>
               <span>Email: </span>
             </strong>
-            <input type="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+            />
           </label>
 
           <label className="form-label">
             <strong>
               <span>Phone Number: </span>
             </strong>
-            <input type="text" placeholder="999-9999-9999" />
+            <input
+              type="text"
+              name="phone"
+              placeholder="999-9999-9999"
+              onChange={handleChange}
+            />
           </label>
 
           {/* fake upload PDF */}
@@ -69,17 +99,20 @@ const NewResumeForm = (props) => {
             <strong>
               <span>Upload Your Resume: </span>
             </strong>
-            {/* <input
-              type="text" /> */}
-            <input className="file-upload" type="file" />
+            <input
+              className="file-upload"
+              type="file"
+              onChange={handleFileSelected}
+            />
           </label>
 
-          <button className="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
   );
-
-}
+};
 
 export default NewResumeForm;
