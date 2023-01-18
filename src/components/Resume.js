@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page, StyleSheet } from "react-pdf/dist/esm/entry.webpack5";
 // import AddIcon from "@mui/icons-material/Add";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CloseIcon from "@mui/icons-material/Close";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { IconButton } from "@mui/material";
 import PlaceholderPDF from "../images/resume_placeholder.pdf";
 
@@ -32,24 +33,38 @@ const Resume = (props) => {
     >
       <div className="applicant-info">
         <p>
-          <strong>Name: </strong>
+          <strong>
+            <span>Name: </span>
+          </strong>
           {resume.name}
         </p>
         <p>
-          <strong>Email: </strong>
+          <strong>
+            <span>Email: </span>
+          </strong>
           {resume.email}
         </p>
         <p>
-          <strong>Phone Number: </strong>
+          <strong>
+            <span>Phone Number: </span>
+          </strong>
           {resume.phone}
         </p>
+      </div>
+      <div className="open-new-tab">
+        <a className="view-pdf" href={resume.resume_url} target="_blank">
+          View PDF
+          <IconButton>
+            <OpenInNewIcon></OpenInNewIcon>
+          </IconButton>
+        </a>
       </div>
       <div className="resume-card">
         <Document
           file={resume.resume_url}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page pageNumber={pageNumber} />
+          <Page pageNumber={pageNumber} width={500} />
           <p>
             Page {pageNumber} of {numPages}
           </p>
