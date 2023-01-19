@@ -1,5 +1,9 @@
 # Resume-Swype Front-End
 
+## Difficulties:
+
+----
+
 ## Sources:
 - Redux Toolkit: `https://react-redux.js.org/tutorials/quick-start`
 
