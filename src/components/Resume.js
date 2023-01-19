@@ -7,7 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { IconButton } from "@mui/material";
 const url = `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-pdfjs.GlobalWorkerOptions.workerSrc = url;
+pdfjs.GlobalWorkerOptions.workerSrc = url; // this is required to fix the routing issue in the url when navigating to another path
 
 const Resume = (props) => {
   const resume = props.resume;
@@ -66,10 +66,14 @@ const Resume = (props) => {
       </div>
       <div className="resume-card">
         <Document
+          loading="Loading PDF..."
           file={resume.resume_url}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page pageNumber={pageNumber} width={500} />
+          <Page
+            pageNumber={pageNumber}
+            width={400}
+          />
           <p>
             Page {pageNumber} of {numPages}
           </p>
