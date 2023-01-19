@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Balancer from 'react-wrap-balancer'
 import "./NewResumeForm.css";
 
 const NewResumeForm = (props) => {
@@ -55,14 +56,16 @@ const NewResumeForm = (props) => {
 
   return (
     <div>
-      <div className="background-img">
-      </div>
+      <div className="background-img"></div>
       <div className="new-resume-form">
         <h3 className="resume-header">
-          1. Please fill out the information below.
-          <br />
-          2. Submit your resume in PDF format.
+          <Balancer>
+            1. Please fill out the information below.
+            <br />
+            2. Submit your resume in PDF format.
+          </Balancer>
         </h3>
+
         <div className="form-container">
           <form className="submit-form" onSubmit={handleResumeSubmit}>
             <label className="form-label">

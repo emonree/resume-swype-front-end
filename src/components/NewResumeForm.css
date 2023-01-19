@@ -26,7 +26,7 @@ body {
 
 .resume-header {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 30px;
   font-family: 'Nunito Sans', sans-serif;
   color: black;
@@ -44,7 +44,6 @@ body {
 
 .form-label span {
   font-family: 'Anybody', cursive;
-  /* font-family: 'Manrope', sans-serif; */
   font-weight: bold;
   text-transform: uppercase;
   color: #355070;
@@ -70,7 +69,6 @@ input.file-upload {
 }
 
 .file-upload {
-  /* padding: 5px; */
   margin-top: 10px;
 }
 
@@ -87,13 +85,31 @@ button.submit-button:hover {
 }
 
 @media screen and (max-width: 960px) {
-  .resume-header h3 {
-    width: 400px;
+  .resume-header {
+    width: 380px;
     font-size: 23px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .submit-form {
-    width: 500px;
+    width: 350px;
   }
+
+.submit-form span,
+.submit-form label > input {
+  width: 100%;
+  display: flex;
+}
+
+.submit-form label {
+  flex-direction: column;
+  padding: 5px;
+}
+
+.submit-button {
+  background-color: #E9ECEF;
+  color: black;
+}
 
 }
