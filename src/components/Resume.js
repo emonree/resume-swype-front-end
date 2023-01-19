@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
-import { Document, Page, StyleSheet } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -50,7 +50,12 @@ const Resume = (props) => {
         </p>
       </div>
       <div className="open-new-tab">
-        <a className="view-pdf" href={resume.resume_url} target="_blank">
+        <a
+          className="view-pdf"
+          href={resume.resume_url}
+          target="_blank"
+          rel="noreferrer"
+        >
           View PDF
           <IconButton>
             <OpenInNewIcon></OpenInNewIcon>
