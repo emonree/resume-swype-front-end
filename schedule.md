@@ -62,3 +62,8 @@
 - Comitted at 10:30 AM:
 - added to README.
 - added styling and google font.
+
+- Commited at 1:52 PM:
+- added to README.
+- installed `react-wrap-balancer` to style wrapped words to look nicer.
+- added `<Provider>` component to index.js and added `<Balancer>` component to NewResumeForm.js for styling.
