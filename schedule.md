@@ -52,3 +52,8 @@
 
 - Comitted at 5:30 PM:
 - added background image to NewResumeForm.js
+
+- Comitted at 7:37 PM:
+- added background image to NewResumeForm.js page.
+- attempt at deploying to Netlify.
+- fixed eslint errors for deployment to Netlify.
