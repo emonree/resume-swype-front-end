@@ -21,6 +21,7 @@ body {
   background-position: 50% 50%;
   background-size: cover;
   content: ' ';
+  transform: scaleX(-1);
 }
 
 .resume-header {

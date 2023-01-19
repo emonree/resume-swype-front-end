@@ -30,12 +30,16 @@ const NewResumeForm = (props) => {
       },
     };
     axios
-      .post("http://localhost:8000/api/resumes", newResume, headers)
+      .post(
+        "https://pure-river-81433.herokuapp.com/api/resumes",
+        newResume,
+        headers
+      )
       .then(() => {
         // show some sort of success message
         alert("You have successfully submitted your resume!");
       });
-    // event.target.reset();
+      event.target.reset();
   };
 
   const handleChange = (event) => {

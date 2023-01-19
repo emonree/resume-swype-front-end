@@ -49,3 +49,6 @@
 - added to README.
 - added a new MUI icon to Resume.js to view PDF on a separate tab.
 - decreased the PDF size in browser so it's not too big.
+
+- Comitted at 5:30 PM:
+- added background image to NewResumeForm.js
