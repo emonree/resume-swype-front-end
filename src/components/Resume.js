@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
-import { Document, Page, pdfjs] } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack5";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
