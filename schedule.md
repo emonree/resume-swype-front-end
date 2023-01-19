@@ -57,3 +57,8 @@
 - added background image to NewResumeForm.js page.
 - attempt at deploying to Netlify.
 - fixed eslint errors for deployment to Netlify.
+----
+## January 19th, 2023:
+- Comitted at 10:30 AM:
+- added to README.
+- added styling and google font.
