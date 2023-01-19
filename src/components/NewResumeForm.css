@@ -26,10 +26,9 @@ body {
 
 .resume-header {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 30px;
-  font-family: 'Anybody', cursive;
-  /* color: #E36414; */
+  font-family: 'Nunito Sans', sans-serif;
   color: black;
 }
 
