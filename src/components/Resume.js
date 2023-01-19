@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page, pdfjs] } from "react-pdf/dist/esm/entry.webpack5";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { IconButton } from "@mui/material";
+const url = `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = url;
 
 const Resume = (props) => {
   const resume = props.resume;
