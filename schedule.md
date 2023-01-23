@@ -67,3 +67,8 @@
 - added to README.
 - installed `react-wrap-balancer` to style wrapped words to look nicer.
 - added `<Provider>` component to index.js and added `<Balancer>` component to NewResumeForm.js for styling.
+----
+## January 22nd, 2023:
+- Committed at 8:26 PM:
+- styling for media query.
+- added to README
