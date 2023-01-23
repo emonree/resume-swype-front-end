@@ -3,7 +3,6 @@
   margin-top: 10px;
   padding-top: 20px;
   border: 1px solid black;
-  /* max-width: 85vw; */
 }
 
 .applicant-info {
@@ -51,17 +50,28 @@ a.view-pdf:hover {
 }
 
 @media screen and (max-width: 960px) {
-  .resume-card-document {
-    height: 200px;
-  }
   .resume-card {
-    width: 100%;
+    width: calc(100% - 30px);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
   }
-  .react-pdf__Document,
-  .react-pdf__Page {
-    max-width: 400px;
+
+  .buttons button {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .swipe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .applicant-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }

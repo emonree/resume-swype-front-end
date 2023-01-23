@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Resume.css";
 import TinderCard from "react-tinder-card";
 import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack5";
@@ -14,6 +14,7 @@ const Resume = (props) => {
   const cardRef = useRef();
 
   const [numPages, setNumPages] = useState(null);
+  const [pdfWidth, setPdfWidth] = useState(400);
   const pageNumber = 1;
 
   const onDocumentLoadSuccess = ({ numPages }) => {
@@ -24,6 +25,15 @@ const Resume = (props) => {
     cardRef.current.swipe(dir);
   };
 
+  useEffect(() => {
+    const resumeCard = document.getElementsByClassName("resume-card")[0];
+    const cardWidth = resumeCard.clientWidth;
+
+    const newPdfWidth = cardWidth - 20;
+    setPdfWidth(newPdfWidth);
+    console.log(newPdfWidth);
+  }, []);
+
   return (
     <TinderCard
       className="swipe"
@@ -32,26 +42,41 @@ const Resume = (props) => {
       preventSwipe={["up", "down"]}
     >
       <div className="applicant-info">
-        <p>
-          <strong>
-            <span>Name: </span>
-          </strong>
-          {resume.name}
-        </p>
-        <p>
-          <strong>
-            <span>Email: </span>
-          </strong>
-          {resume.email}
-        </p>
-        <p>
-          <strong>
-            <span>Phone Number: </span>
-          </strong>
-          {resume.phone}
-        </p>
+        <div>
+          <p>
+            <strong>
+              <span>Name: </span>
+            </strong>
+            {resume.name}
+          </p>
+          <p>
+            <strong>
+              <span>Email: </span>
+            </strong>
+            {resume.email}
+          </p>
+          <p>
+            <strong>
+              <span>Phone Number: </span>
+            </strong>
+            {resume.phone}
+          </p>
+        </div>
+        <div className="open-new-tab">
+          <a
+            className="view-pdf"
+            href={resume.resume_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View PDF
+            <IconButton>
+              <OpenInNewIcon></OpenInNewIcon>
+            </IconButton>
+          </a>
+        </div>
       </div>
-      <div className="open-new-tab">
+      {/* <div className="open-new-tab">
         <a
           className="view-pdf"
           href={resume.resume_url}
@@ -63,17 +88,14 @@ const Resume = (props) => {
             <OpenInNewIcon></OpenInNewIcon>
           </IconButton>
         </a>
-      </div>
+      </div> */}
       <div className="resume-card">
         <Document
           loading="Loading PDF..."
           file={resume.resume_url}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page
-            pageNumber={pageNumber}
-            width={400}
-          />
+          <Page pageNumber={pageNumber} width={pdfWidth} />
           <p>
             Page {pageNumber} of {numPages}
           </p>
