@@ -1,12 +1,12 @@
-# Resume-Swype Front-End
+# Resume-Swype Front-End using React.js, React Router and Redux
 
 ## What The App Does:
-- Resume Swype is for recruiters to view resumes. The average time a recruiter will spend looking at a resume is 6 seconds! With this app, the recruiter can simply click a button or swipe to accept or reject the resume.
+- Resume Swype is for recruiters to view resumes for jobs. The average time a recruiter will spend looking at a resume is 6 seconds! With this app, the recruiter can simply click a button or swipe to accept or reject the resume.
 - I used the `Tinder Card` library for the swipe feature and to display each resume as a "card". 
-- On page load, applicants applying for a job are required to fill out a form with their Name, Email, and Phone #. They are then required to submit their resume in PDF format as stated on top. Once the application is successfully submitted, an alert will pop up saying "You have successfully submitted your resume!"
+- On the home page, applicants applying for a job are required to fill out a form with their Name, Email, and Phone #. They are also required to upload their resume in PDF format. Once the application is successfully submitted, an alert will pop up saying "You have successfully submitted your resume!"
 - IDEALLY, the recruiter would be able to leave a note or inform the applicant whether he/she got the job or not through email, but I have not gotten that far in terms of how to implement that.
-- In the url path `/recruiterpage`, the applicant's information and resume will appear on the screen.
-- I also added a `view PDF` button for the recruiter to open the resume in a new tab to view it in full because it might not be big enough on the app. 
+- I did not add an auth log in feature, so the recruiter would type `/recruiterpage` in the url path. The applicant's information and resume will then appear on the screen.
+- I also added a `view PDF` button for the recruiter to open the resume in a new tab to view it in full screen because it might not be big enough on the app. 
 ----
 
 ## Redux Toolkit
